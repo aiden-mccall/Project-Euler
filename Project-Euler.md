@@ -43,3 +43,33 @@ problem_1(999)
 ```
 
     ## [1] 233168
+
+## Problem 2
+
+``` r
+problem_2 <- function(n){
+ fib <- vector()
+ fib_count <- vector()
+ fib[1] <- 1
+ fib[2] <- 2
+ i = 2
+ sum = 0
+ while (fib[i] < n){
+   i = i + 1
+   fib[i] = fib[i-1] + fib[i-2]
+ }
+ # The loop will still run the last value.
+ fib <- fib[1:(length(fib) - 1)]
+ for (i in 1:length(fib)){
+   if (fib[i] %% 2 == 0){
+     sum = sum + fib[i] 
+   }
+ }
+ sum
+}
+
+# Solution for 4 million
+problem_2(4000000)
+```
+
+    ## [1] 4613732
