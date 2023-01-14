@@ -68,3 +68,23 @@ problem_2 <- function(n){
 
 # Solution for 4 million
 problem_2(4000000)
+````
+
+## Problem 3
+
+````{r Problem_3}
+problem_3 <- function(n){
+  i = 2
+  while (i*i <= n) {
+    if (( n %% i ) != 0){
+      i = i + 1
+    }
+    else {
+      n <- n/i
+    }
+  }
+  n
+}
+
+problem_3(600851475143)
+````
