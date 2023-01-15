@@ -5,6 +5,9 @@ Aiden McCall
 
 ## Problem Solutions
 
+Website:
+https://projecteuler.net/archives
+
 These are my solutions to Project Euler questions; the answers are not
 intended to be the most efficient solutions possible and more so
 programming practise. I will be trying to stick to the outlined ‘rules’,
