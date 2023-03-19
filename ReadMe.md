@@ -1,23 +1,23 @@
----
-title: "Project Euler"
-author: "Aiden McCall"
-date: '2023-03-19'
-output: github_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+Project Euler
+================
+Aiden McCall
+2023-03-19
 
 ## Problem Solutions
 
-These are my solutions to Project Euler questions; the answers are not intended to be the most efficient solutions possible and more so programming practise. I will be trying to stick to the outlined 'rules', specifically the 'one-minute rule' that your program cannot take longer than one minute to run.
+These are my solutions to Project Euler questions; the answers are not
+intended to be the most efficient solutions possible and more so
+programming practise. I will be trying to stick to the outlined ‘rules’,
+specifically the ‘one-minute rule’ that your program cannot take longer
+than one minute to run.
 
-If you are hoping to solve any of these problems, I would urge you to not look at the solutions and use the opportunity to develop problem solving skills both inside and outside any programming language.
+If you are hoping to solve any of these problems, I would urge you to
+not look at the solutions and use the opportunity to develop problem
+solving skills both inside and outside any programming language.
 
 ## Problem 1
 
-```{r Problem_1}
+``` r
 problem_1 <- function (number){
   # Starts a counter
   sum.count <- 0
@@ -42,9 +42,11 @@ problem_1 <- function (number){
 problem_1(999)
 ```
 
+    ## [1] 233168
+
 ## Problem 2
 
-```{r Problem_2}
+``` r
 problem_2 <- function(n){
  fib <- vector()
  fib_count <- vector()
@@ -68,11 +70,13 @@ problem_2 <- function(n){
 
 # Solution for 4 million
 problem_2(4000000)
-````
+```
+
+    ## [1] 4613732
 
 ## Problem 3
 
-````{r Problem_3}
+``` r
 problem_3 <- function(n){
   i = 2
   while (i*i <= n) {
@@ -87,11 +91,13 @@ problem_3 <- function(n){
 }
 
 problem_3(600851475143)
-````
+```
+
+    ## [1] 6857
 
 ## Problem 4
 
-````{r Problem_4}
+``` r
 final_answer <- function(number) {
   # Set up a vector to start.
   units <- vector()
@@ -128,14 +134,17 @@ for (i in 900:999){
     final_answer(number)
   }
 }
+```
 
+## Problem 5
 
-````
-
-## Problem 5 
-````{r Problem_5}
+``` r
 library(tictoc)
+```
 
+    ## Warning: package 'tictoc' was built under R version 4.2.2
+
+``` r
 a <- 2520
 number <- 1
 sum.number <- vector()
@@ -151,14 +160,23 @@ while(a > 0){
   number = number + 1
 }
 toc()
+```
+
+    ## 155.05 sec elapsed
+
+``` r
 number
+```
+
+    ## [1] 232792561
+
+``` r
 # answer, number = 232792561 - 1 = 232792560
 # currently takes 1028.11 sec to run
 # That is 17.1 minutes.
-````
+```
 
-````{r Problem_5_quicker}
-
+``` r
 # Trying to make the method quicker - I think I should use a compiled language though.
 a <- 1
 number <- 1
@@ -182,10 +200,18 @@ while(a > 0){
   number = number + 1
 }
 toc()
-number
+```
 
-````
+    ## 62.67 sec elapsed
+
+``` r
+number
+```
+
+    ## [1] 232792561
 
 ## Issue
 
-After getting to Problem_5 I have realised that R is computationally too slow. I will more than likely use Fortran going forward as it is significantly quicker at these types of calculations.
+After getting to Problem_5 I have realised that R is computationally too
+slow. I will more than likely use Fortran going forward as it is
+significantly quicker at these types of calculations.
